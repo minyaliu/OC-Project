@@ -12,33 +12,4 @@ public class Dialogue : MonoBehaviour
     {
         ShowLine();
     }
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            NextLine();
-        }
-    }
-
-    void ShowLine()
-    {
-        if (currentLine < dialogueLines.Length)
-        {
-            dialogueText.text = dialogueLines[currentLine];
-        }
-    }
-
-    void NextLine()
-    {
-        currentLine++;
-        if (currentLine < dialogueLines.Length)
-        {
-            ShowLine();
-        }
-        else
-        {
-            dialogueText.text = "";
-        }
-    }
 }
